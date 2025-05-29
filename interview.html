@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>신규 채영자 면접부</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="mobile-container">
+        <form class="info-form">
+            <h2 class="form-title">신규 채용자 면접부</h2>
+            <div class="section">
+                <div class="section-title">혈압 측정 결과</div>
+                <div class="survey-box">
+                    <div class="survey-row">
+                        <div class="survey-table-header">구분</div>
+                        <div class="survey-table-header">1차</div>
+                        <div class="survey-table-header">2차</div>
+                        <div class="survey-table-header">3차</div>
+                    </div>
+                    <div class="survey-row">
+                        <div class="survey-table-header">최고</div>
+                        <input type="text" class="survey-table-input" placeholder="입력">
+                        <input type="text" class="survey-table-input" placeholder="입력">
+                        <input type="text" class="survey-table-input" placeholder="입력">
+                    </div>
+                    <div class="survey-row">
+                        <div class="survey-table-header">최저</div>
+                        <input type="text" class="survey-table-input" placeholder="입력">
+                        <input type="text" class="survey-table-input" placeholder="입력">
+                        <input type="text" class="survey-table-input" placeholder="입력">
+                    </div>
+                    <div class="survey-row">
+                        <span class="photo-upload-btn" disabled>사진 업로드 </span>
+                        <button class="photo-icon">📷</button>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="section-title">문진 결과</div>
+                <div class="survey-table">
+                    <div class="survey-table-row">
+                        <div class="survey-table-header">치료 여부</div>
+                        <div class="survey-table-cell">
+                            <label class="radio-label"><input type="radio" name="radio1" checked> 지병</label>
+                            <label class="radio-label"><input type="radio" name="radio1"> 사고</label>
+                        </div>
+                    </div>
+                    <div class="survey-table-row">
+                        <div class="survey-table-header">입원 여부</div>
+                        <div class="survey-table-cell">
+                            <label class="radio-label"><input type="radio" name="radio2">지병</label>
+                            <label class="radio-label"><input type="radio" name="radio2">사고</label>
+                        </div>
+                    </div>
+                    <div class="survey-table-row">
+                        <div class="survey-table-header">치료/입원 <br>내용 기재</div>
+                        <div class="survey-table-cell">
+                            <textarea class="survey-table-input" rows="3" placeholder="(언제,어디서,어떻게,어디를,현재 상태)"></textarea>
+                        </div>
+                    </div>
+                    <div class="survey-table-row">
+                        <div class="survey-table-header">혈액형</div>
+                        <div class="survey-table-cell">
+                            <select class="survey-table-input">
+                                <option>선택</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="survey-table-row">
+                        <div class="survey-table-header">유해 작업</div>
+                        <div class="survey-table-cell">
+                            <select class="survey-table-input">
+                                <option>선택</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="next-btn">다음</button>
+        </form>
+    </div>
+</body>
+</html>
