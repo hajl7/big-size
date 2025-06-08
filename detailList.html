@@ -256,6 +256,7 @@ titles.forEach((btn, idx) => {
       contents[idx].classList.add('active');
       titles[idx].classList.add('active');
       toggleTexts[idx].textContent = '[ 닫기 ▲ ]';
+      titles[idx + 1].scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   });
 });
