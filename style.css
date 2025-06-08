@@ -94,13 +94,13 @@ footer {
     left: 0;
     transform: none;
     transform-origin: top left;
-    width: 420px;
+    width: 400px;
     min-height: 800px;
     margin: 0;
     position: static;
   }  
   .accordion {
-    max-width: 420px;    
+    max-width: 400px;    
   }
 }
 .info-form {
