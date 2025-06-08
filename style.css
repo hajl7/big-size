@@ -87,21 +87,36 @@ footer {
 .mobile-container2 {
     height: 100dvh;  
 }
-@media (max-width: 359px) {
+@media (max-width: 360px) {
   .mobile-container {
     position: absolute;
     top: 0;
     left: 0;
     transform: none;
     transform-origin: top left;
-    width: 400px;
+    width: 420px;
     min-height: 800px;
     margin: 0;
     position: static;
   }  
-  .accordion {
-    max-width: 400px;    
-  }
+    .accordion {
+      width: 420px;
+      margin: 0 auto;
+      overflow-x: auto;
+    }
+    .accordion-item {
+      min-width: 420px;
+    }
+    .accordion-content {
+      width: 420px;
+    }
+    .accordion-content .mobile-container {
+      width: 420px;
+    }
+    .titlepage-container {
+      width: 420px;
+      margin: 0 auto;
+    }
 }
 .info-form {
   max-width: 100%;
@@ -649,7 +664,14 @@ footer {
   border: 1px solid #eee;
   background: #fff;
   border-radius: 0 0 8px 8px;
+  width: 100%;
+  box-sizing: border-box;
 }
 .accordion-content.active {
   display: block;
 }
+.accordion-content .mobile-container {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
