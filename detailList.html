@@ -9,11 +9,11 @@
 <body>
 <div class="accordion">
   <div class="accordion-item">
-    <button class="accordion-title">
-      <div class="accordion-label">상세 정보 입력</div>
-      <div class="accordion-toggle-text">[ 자세히 보기 ▼ ]</div>
+    <button class="accordion-title active">
+      <div class="accordion-label">상세 정보 입력 </div>
+      <div class="accordion-toggle-text">[접기]</div>
     </button>    
-    <div class="accordion-content">
+    <div class="accordion-content active">
       <div class="mobile-container">
         <form class="info-form">
             <h2 class="form-title">상세 정보 입력</h2>
@@ -81,8 +81,8 @@
   </div>
   <div class="accordion-item">
     <button class="accordion-title">
-      <div class="accordion-label">교육 이수 및 보호구 수령 확인</div>
-      <div class="accordion-toggle-text">[ 자세히 보기 ▼ ]</div>
+      <div class="accordion-label">교육 이수 및 보호구 수령</div>
+      <div class="accordion-toggle-text">[펼치기]</div>
     </button> 
     <div class="accordion-content">
       <div class="mobile-container">
@@ -137,10 +137,6 @@
                         </span>
                         
                     </div>
-                    <div class="survey-row">
-                        <div type="button" class="photo-upload-btn" disabled>면접자 서명</div>
-                        <button class="photo-icon">📷</button>
-                    </div>
                 </div>
             </div>
             <button type="button" class="next-btn">다음</button>
@@ -151,7 +147,7 @@
   <div class="accordion-item">
     <button class="accordion-title">
       <div class="accordion-label">신규 채용자 면접부</div>
-      <div class="accordion-toggle-text">[ 자세히 보기 ▼ ]</div>
+      <div class="accordion-toggle-text">[펼치기]</div>
     </button> 
     <div class="accordion-content">
       <div class="mobile-container">
@@ -250,13 +246,20 @@ titles.forEach((btn, idx) => {
     contents.forEach((c, i) => {
       c.classList.remove('active');
       titles[i].classList.remove('active');
-      toggleTexts[i].textContent = '[ 자세히 보기 ▼ ]';
+      toggleTexts[i].textContent = '[펼치기]';
     });
     if (!isActive) {
       contents[idx].classList.add('active');
       titles[idx].classList.add('active');
-      toggleTexts[idx].textContent = '[ 닫기 ▲ ]';
-      titles[idx].scrollIntoView({ behavior: 'smooth', block: 'start' });
+      toggleTexts[idx].textContent = '[접기]';
+      
+      const offset = 12; 
+      const rect = btn.getBoundingClientRect();
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      window.scrollTo({
+        top: rect.top + scrollTop - offset,
+        behavior: 'smooth'
+      });
     }
   });
 });
@@ -266,13 +269,20 @@ nextBtns.forEach((btn, idx) => {
     contents.forEach((c, i) => {
       c.classList.remove('active');
       titles[i].classList.remove('active');
-      toggleTexts[i].textContent = '[ 자세히 보기 ▼ ]';
+      toggleTexts[i].textContent = '[펼치기]';
     });
     if (idx + 1 < contents.length) {
       contents[idx + 1].classList.add('active');
       titles[idx + 1].classList.add('active');
-      toggleTexts[idx + 1].textContent = '[ 닫기 ▲ ]';
-      titles[idx + 1].scrollIntoView({ behavior: 'smooth', block: 'start' });
+      toggleTexts[idx + 1].textContent = '[접기]';
+      
+      const offset = 12; 
+      const rect = titles[idx + 1].getBoundingClientRect();
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      window.scrollTo({
+        top: rect.top + scrollTop - offset,
+        behavior: 'smooth'
+      });
     }
   });
 });
