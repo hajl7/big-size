@@ -669,7 +669,7 @@ footer {
   }
 .accordion-toggle-text {
   font-family: 'Malgun Gothic', sans-serif;
-  font-size: 0.8em;
+  font-size: 1em;
   /* padding-top: 8px; */
   white-space: nowrap;
   display: inline;
