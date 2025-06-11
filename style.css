@@ -87,7 +87,7 @@ footer {
 .mobile-container2 {
     height: 100dvh;  
 }
-@media (max-width: 346px) {
+@media (max-width: 359px) {
   .mobile-container {
     position: absolute;
     top: 0;
@@ -664,7 +664,7 @@ footer {
 .accordion-label {
     /* flex: 1; */
     white-space: nowrap;
-    font-size: 1.45rem;
+    font-size: 1.7rem;
     display: inline;
   }
 .accordion-toggle-text {
