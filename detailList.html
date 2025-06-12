@@ -11,12 +11,11 @@
   <div class="accordion-item">
     <button class="accordion-title active">
       <div class="accordion-label">상세 정보 입력 </div>
-      <div class="accordion-toggle-text">[접기]</div>
+      <span class="accordion-arrow" aria-hidden="true"></span>
     </button>    
     <div class="accordion-content active">
       <div class="mobile-container">
         <form class="info-form">
-            <h2 class="form-title">상세 정보 입력</h2>
             <div class="form-row" >
                 <label for="type">소속회사</label>
                 <select id="type">
@@ -81,13 +80,12 @@
   </div>
   <div class="accordion-item">
     <button class="accordion-title">
-      <div class="accordion-label">교육 이수 및 보호구 수령</div>
-      <div class="accordion-toggle-text">[펼치기]</div>
+      <div class="accordion-label">교육 이수 및 보호구 수령 확인</div>
+      <span class="accordion-arrow" aria-hidden="true"></span>
     </button> 
     <div class="accordion-content">
       <div class="mobile-container">
         <form class="info-form">
-            <h2 class="form-title">교육 이수 및 보호구 <br>수령 확인</h2>
             <div class="section">
                 <div class="section-title">◈ 교육 이수 사항</div>
                 <div class="survey-box">
@@ -147,12 +145,11 @@
   <div class="accordion-item">
     <button class="accordion-title">
       <div class="accordion-label">신규 채용자 면접부</div>
-      <div class="accordion-toggle-text">[펼치기]</div>
+      <span class="accordion-arrow" aria-hidden="true"></span>
     </button> 
     <div class="accordion-content">
       <div class="mobile-container">
         <form class="info-form">
-            <h2 class="form-title">신규 채용자 면접부</h2>
             <div class="section">
                 <div class="section-title">◆ 혈압 측정 결과</div>
                 <div class="survey-box">
@@ -234,11 +231,21 @@
 </body>
 </html>
 <script>
-    //임시로 작성함
+  //임시로 작성함
  const titles = document.querySelectorAll('.accordion-title');
 const contents = document.querySelectorAll('.accordion-content');
-const toggleTexts = document.querySelectorAll('.accordion-toggle-text');
 const nextBtns = document.querySelectorAll('.accordion-content .next-btn');
+
+function updateArrows() {
+  titles.forEach((btn, idx) => {
+    const arrow = btn.querySelector('.accordion-arrow');
+    if (contents[idx].classList.contains('active')) {
+      arrow.classList.add('open');
+    } else {
+      arrow.classList.remove('open');
+    }
+  });
+}
 
 titles.forEach((btn, idx) => {
   btn.addEventListener('click', function() {
@@ -246,13 +253,13 @@ titles.forEach((btn, idx) => {
     contents.forEach((c, i) => {
       c.classList.remove('active');
       titles[i].classList.remove('active');
-      toggleTexts[i].textContent = '[펼치기]';
     });
     if (!isActive) {
       contents[idx].classList.add('active');
-      titles[idx].classList.add('active');
-      toggleTexts[idx].textContent = '[접기]';
-      
+      titles[idx].classList.add('active'); 
+    }
+    updateArrows();
+    if (!isActive) {
       const offset = 12; 
       const rect = btn.getBoundingClientRect();
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -269,13 +276,13 @@ nextBtns.forEach((btn, idx) => {
     contents.forEach((c, i) => {
       c.classList.remove('active');
       titles[i].classList.remove('active');
-      toggleTexts[i].textContent = '[펼치기]';
     });
     if (idx + 1 < contents.length) {
       contents[idx + 1].classList.add('active');
       titles[idx + 1].classList.add('active');
-      toggleTexts[idx + 1].textContent = '[접기]';
-      
+       }
+    updateArrows();
+    if (idx + 1 < contents.length) {
       const offset = 12; 
       const rect = titles[idx + 1].getBoundingClientRect();
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -287,4 +294,5 @@ nextBtns.forEach((btn, idx) => {
   });
 });
 
+updateArrows();
     </script>
