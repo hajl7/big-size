@@ -1,13 +1,17 @@
 @font-face {
-	src: url(./css/fonts/LGSmHaotfTR.otf);
-	font-family: "LG스마트체2.0 Regular";
+    font-family: 'lg_smart_h_otf2.0r';
+    src: url('lgsmhaotftr-webfont.woff2') format('woff2'),
+         url('lgsmhaotftr-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
 html, body {
   margin: 0;
   padding: 0;
   overflow-y: auto;
-  font-family: 'LG스마트체2.0 Regular', sans-serif;
+  font-family: 'lg_smart_h_otf2.0r', sans-serif;
     /* -webkit-text-fill-color: #333; */
   /* color: #333; */
 }
@@ -16,13 +20,13 @@ html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family:'LG스마트체2.0 Regular', sans-serif;
+  font-family:'lg_smart_h_otf2.0r', sans-serif;
     /* -webkit-text-fill-color: #333; */
   /* color: #333; */
 }
 body {
   /* font-family: 'Arial', sans-serif; */
-  font-family: 'LG스마트체2.0 Regular', sans-serif;
+  font-family: 'lg_smart_h_otf2.0r', sans-serif;
   line-height: 1.4;
   color: #333;
   background: #f7f7f7;
