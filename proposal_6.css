@@ -1,13 +1,13 @@
 @font-face {
-	src: url(./css/fonts/LGSmHaotfR_v1.4.otf);
-	font-family: "SmHaotfR";
+	src: url(./css/fonts/LGSmHaotfTR.otf);
+	font-family: "SmHaotfTR_otf";
 }
 
 html, body {
   margin: 0;
   padding: 0;
   overflow-y: auto;
-  font-family: 'SmHaotfR', sans-serif;
+  font-family: 'SmHaotfTR_otf', sans-serif;
     -webkit-text-fill-color: #333;
   color: #333;
 }
@@ -16,13 +16,13 @@ html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family:'SmHaotfR', sans-serif;
+  font-family:'SmHaotfTR_otf', sans-serif;
     -webkit-text-fill-color: #333;
   color: #333;
 }
 body {
   /* font-family: 'Arial', sans-serif; */
-  font-family: 'SmHaotfR', sans-serif;
+  font-family: 'SmHaotfTR_otf', sans-serif;
   line-height: 1.4;
   color: #333;
   background: #f7f7f7;
