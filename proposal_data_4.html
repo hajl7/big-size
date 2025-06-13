@@ -99,10 +99,24 @@
 <script>
     //임시로 작성함
    
-    const btn = document.getElementById('agreeConfirmBtn2');
+   document.getElementById('agree-all').addEventListener('change', function(e) {
+            const checked = e.target.checked;
+            document.querySelectorAll('.agree-checkbox').forEach(cb => cb.checked = checked);
+        });
+
+    
+     const btn = document.getElementById('agreeConfirmBtn2');
+    const checkboxes = document.querySelectorAll('.agree-checkbox');
   
     btn.addEventListener('click', function() {
       if (!btn.disabled) {
+         const allChecked = Array.from(checkboxes).every(checkbox => checkbox.checked);
+        
+        if (!allChecked) {
+          alert('동의 항목을 체크해주세요');
+          return;
+        }
+
         if (window.opener) {
           window.opener.postMessage('agreeConfirmed2', '*');
         }
