@@ -16,7 +16,7 @@
     <div class="accordion-content active">
       <div class="mobile-container">
         <form class="info-form">
-            <div class="form-row" >
+            <div class="form-row" style="margin-top: 5px;">
                 <label for="type">소속회사</label>
                 <select id="type">
                     <option>선택</option>
@@ -128,12 +128,14 @@
                         <span class="survey-table-span">기타</span>
                         <input type="checkbox" class="survey-checkbox blue-checkbox">
                     </div>
-                    <div class="survey-table-row" >
-                        <span type="text" class="survey-table-span" style="justify-content:space-between;">
-                            안전보건관리 및 정보보호서약
-                            <input type="checkbox" class="survey-checkbox blue-checkbox">
+                    <div class="survey-table-row agree-boder">
+                        <span class="survey-table-span agree-detail-trigger" style="display:flex; align-items:center; padding:0 8px; min-height:36px; font-size:1.08rem; background:#fafafa; border-radius:6px; border:1px solid #eee; width:100%;">
+                            <span class="agree-detail-label" style="flex:1;">안전보건관리 및 정보보호서약</span>
+                            <span class="agree-detail-right" style="display:flex; align-items:center; gap:4px;">
+                                <span class="agree-confirm-text" style="display:none; color:#2989c9; font-weight:700; font-size:1.2rem;">확인</span>
+                                <span class="chevron-icon" aria-hidden="true"></span>
+                            </span>
                         </span>
-                        
                     </div>
                 </div>
             </div>
@@ -216,6 +218,15 @@
                             </select>
                         </div>
                     </div>
+                    <div class="survey-table-row agree-boder">
+                        <span class="survey-table-span agree-data-trigger" style="display:flex; align-items:center; padding:0 8px; min-height:36px; font-size:1.08rem; background:#fafafa; border-radius:6px; border:1px solid #eee; width:100%;">
+                            <span class="agree-detail-label" style="flex:1;">개인정보 수집 이용 및 제공</span>
+                            <span class="agree-detail-right" style="display:flex; align-items:center; gap:4px;">
+                                <span class="agree-data-confirm-text" style="display:none; color:#2989c9; font-weight:700; font-size:1.2rem;">확인</span>
+                                <span class="chevron-icon" aria-hidden="true"></span>
+                            </span>
+                        </span>
+                    </div>
                     <div class="survey-row">
                         <span class="photo-upload-btn" disabled>면접자 서명</span>
                         <button class="photo-icon">📷</button>
@@ -295,4 +306,27 @@ nextBtns.forEach((btn, idx) => {
 });
 
 updateArrows();
+
+const agreeTrigger = document.querySelector('.agree-detail-trigger');
+const agreeConfirmText = document.querySelector('.agree-confirm-text');
+agreeTrigger.addEventListener('click', function() {
+  window.open('agreeDetail.html', 'agreeDetail');
+});
+
+window.addEventListener('message', function(e) {
+  if (e.data === 'agreeConfirmed') {
+    agreeConfirmText.style.display = 'inline';
+  }
+});
+
+const agreeDataTrigger = document.querySelector('.agree-data-trigger');
+const agreeDataConfirmText = document.querySelector('.agree-data-confirm-text');
+agreeDataTrigger.addEventListener('click', function() {
+  window.open('agreeData.html', 'agreeData');
+});
+window.addEventListener('message', function(e) {
+  if (e.data === 'agreeConfirmed') {
+    if (agreeDataConfirmText) agreeDataConfirmText.style.display = 'inline';
+  }
+});
     </script>

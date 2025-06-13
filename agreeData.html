@@ -9,9 +9,9 @@
 <body>
     <div class="mobile-container">
         <form class="info-form">
-            <h2 class="form-title">개인정보 및 동의•이용 <br>동의서</h2>
+            <h2 class="form-title">개인정보 및 동의•이용<br>동의서</h2>
             <div class="agree-list">
-                <div class="agree-chapter">
+                <div class="agree-chapter open">
                     <div class="agree-title-row">
                         <span class="agree-title">개인정보 수집 및 이용 동의</span>
                     </div>
@@ -26,7 +26,7 @@
                         </label>             
                     </div>
                 </div>
-                <div class="agree-chapter">
+                <div class="agree-chapter open">
                     <div class="agree-title-row">                        
                         <span class="agree-title">고유식별정보의 수집 및 이용 동의</span>
                         <input type="checkbox" class="agree-checkbox">
@@ -36,7 +36,7 @@
                         (2) ~
                     </div>
                 </div>
-                <div class="agree-chapter">
+                <div class="agree-chapter open">
                     <div class="agree-title-row">
                         <span class="agree-title">민감정보 수집 및 이용 동의</span>
                         <input type="checkbox" class="agree-checkbox">
@@ -46,7 +46,7 @@
                         (2) ~
                     </div>
                 </div>
-                <div class="agree-chapter">
+                <div class="agree-chapter open">
                     <div class="agree-title-row">
                         <span class="agree-title">바이오정보 수집 및 이용 동의 <br>(얼굴인식 출역 관리 등록 시)</span>
                         <input type="checkbox" class="agree-checkbox">
@@ -55,7 +55,7 @@
                         (1) 바이오정보 수집 항목
                     </div>
                 </div>
-                <div class="agree-chapter">
+                <div class="agree-chapter open">
                     <div class="agree-title-row">
                         <span class="agree-title">CCTV/드론 촬영 수집 및 <br>이용 동의</span>
                         <input type="checkbox" class="agree-checkbox">
@@ -69,7 +69,7 @@
                 <input type="checkbox" id="agree-all" class="agree-checkbox">
                 <label for="agree-all">전체 동의</label>
             </div>
-            <button type="submit" class="next-btn">작성 완료</button>
+            <button type="submit" class="next-btn" id="agreeConfirmBtn" >동의</button>
         </form>
     </div>
 </body>
@@ -86,5 +86,17 @@
             const checked = e.target.checked;
             document.querySelectorAll('.agree-checkbox').forEach(cb => cb.checked = checked);
         });
+    });
+
+    
+    const btn = document.getElementById('agreeConfirmBtn');
+  
+    btn.addEventListener('click', function() {
+      if (!btn.disabled) {
+        if (window.opener) {
+          window.opener.postMessage('agreeConfirmed', '*');
+        }
+        window.close();
+      }
     });
     </script>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>상세 정보 입력</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+</head>
+<body>
+  <div class="agree-detail-modal">
+    <div class="agree-detail-header">
+      <span class="agree-detail-title">안전보건관리 및 정보보호<br>서약서</span>
+    </div>
+    <div class="agree-detail-content" id="agreeContent">
+      <b>1. 현장내에서 지급받은 개인 보호구를 올바르게 착용하고, 사용 하겠습니다.</b><br><br>
+      <b>2. 지정된 통로를  이용하고 통제구역은 임의로 출입하지 않겠으며, 지정장소 외 흡연은 절대하지 않겠습니다.</b><br><br>
+      <b>3. 작업 중 위험상황이 발생하면 작업을 중지하고 안전조치를 실시한 후, 작업을 실시 하겠습니다.</b><br><br>
+      <b>4. 안전조치가 자체적으로 불가능한 경우에는 즉시 관리감독자에게 보고 하겠습니다.</b><br><br>
+      <b>5. 공사 중 습득한 제반 안전 및 정보보안 사항에 대햐여 비밀을 지킬 것이며, 외부에 누설하지 않겠습니다.</b><br><br>
+      <b>6. 산업안전보건법 제40조 근로자의 안전조치 및 보건조치 준수사항에 의거햐여 현장 내 안전기준 및 규정을 준수할 것이며, 이에 불응하여 적발시 자이 C&A 현장관리자의 지시에 따르겠으여, 제재조치에 이의를 제기하지 않겠습니다.</b><br>
+      <b>1. 현장내에서 지급받은 개인 보호구를 올바르게 착용하고, 사용 하겠습니다.</b><br><br>
+      <b>2. 지정된 통로를  이용하고 통제구역은 임의로 출입하지 않겠으며, 지정장소 외 흡연은 절대하지 않겠습니다.</b><br><br>
+      <b>3. 작업 중 위험상황이 발생하면 작업을 중지하고 안전조치를 실시한 후, 작업을 실시 하겠습니다.</b><br><br>
+      <b>4. 안전조치가 자체적으로 불가능한 경우에는 즉시 관리감독자에게 보고 하겠습니다.</b><br><br>
+      <b>5. 공사 중 습득한 제반 안전 및 정보보안 사항에 대햐여 비밀을 지킬 것이며, 외부에 누설하지 않겠습니다.</b><br><br>
+      <b>6. 산업안전보건법 제40조 근로자의 안전조치 및 보건조치 준수사항에 의거햐여 현장 내 안전기준 및 규정을 준수할 것이며, 이에 불응하여 적발시 자이 C&A 현장관리자의 지시에 따르겠으여, 제재조치에 이의를 제기하지 않겠습니다.</b><br>
+    </div>
+    <div class="agree-detail-footer">
+      <button class="agree-detail-confirm" id="agreeConfirmBtn" disabled>확인</button>
+    </div>
+  </div>
+ 
+</body>
+</html>
+  <script>
+    const content = document.getElementById('agreeContent');
+    const btn = document.getElementById('agreeConfirmBtn');
+    content.addEventListener('scroll', function() {
+      if (content.scrollTop + content.clientHeight >= content.scrollHeight - 2) {
+        btn.disabled = false;
+        btn.classList.add('active');
+      }
+    });
+    btn.addEventListener('click', function() {
+      if (!btn.disabled) {
+        if (window.opener) {
+          window.opener.postMessage('agreeConfirmed', '*');
+        }
+        window.close();
+      }
+    });
+  </script>
