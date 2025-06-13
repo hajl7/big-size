@@ -1,6 +1,6 @@
 @font-face {
 	src: url(./css/fonts/LGSmHaotfTR.otf);
-	font-family: "SmHaotfTR_otf";
+	font-family: "LG스마트체2.0 Regular";
 }
 
 html, body {
@@ -8,8 +8,8 @@ html, body {
   padding: 0;
   overflow-y: auto;
   font-family: 'LG스마트체2.0 Regular', sans-serif;
-    -webkit-text-fill-color: #333;
-  color: #333;
+    /* -webkit-text-fill-color: #333; */
+  /* color: #333; */
 }
 
 * {
@@ -17,8 +17,8 @@ html, body {
   padding: 0;
   box-sizing: border-box;
   font-family:'LG스마트체2.0 Regular', sans-serif;
-    -webkit-text-fill-color: #333;
-  color: #333;
+    /* -webkit-text-fill-color: #333; */
+  /* color: #333; */
 }
 body {
   /* font-family: 'Arial', sans-serif; */
@@ -26,7 +26,7 @@ body {
   line-height: 1.4;
   color: #333;
   background: #f7f7f7;
-  -webkit-text-fill-color: #333;
+  /* -webkit-text-fill-color: #333; */
 }
 /* Header styles */
 header {
@@ -220,7 +220,7 @@ footer {
 .next-btn {
   width: 100%;
   background:#122d43;
-  color: #fff;
+  color: #fff ;
   font-size: 2.0rem;
   padding: 12px 0;
   border: none;
