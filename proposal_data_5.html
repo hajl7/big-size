@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>개인정보 및 동의•이용 동의서</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="proposal_5.css">
 </head>
 <body>
     <div class="mobile-container">
@@ -98,19 +98,13 @@
 </html>
 <script>
     //임시로 작성함
-    // document.addEventListener('DOMContentLoaded', function() {
-    //     document.querySelectorAll('.agree-chapter').forEach(function(chapter) {
-    //         chapter.querySelector('.agree-title-row').addEventListener('click', function() {
-    //             chapter.classList.toggle('open');
-    //         });
-    //     });
-    //     document.getElementById('agree-all').addEventListener('change', function(e) {
-    //         const checked = e.target.checked;
-    //         document.querySelectorAll('.agree-checkbox').forEach(cb => cb.checked = checked);
-    //     });
-    // });
-
-    
+   
+        document.getElementById('agree-all').addEventListener('change', function(e) {
+            const checked = e.target.checked;
+            document.querySelectorAll('.agree-checkbox').forEach(cb => cb.checked = checked);
+        });
+   
+   
     const btn = document.getElementById('agreeConfirmBtn2');
   
     btn.addEventListener('click', function() {

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>상세입력 리스트</title>
+  <link rel="stylesheet" href="proposal_2.css">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+</head>
+<body>
+<div class="accordion">
+  <div class="accordion-item">
+    <button class="accordion-title active">
+      <div class="accordion-label">상세 정보 입력 </div>
+      <span class="accordion-arrow" aria-hidden="true"></span>
+    </button>    
+    <div class="accordion-content active">
+      <div class="mobile-container">
+        <form class="info-form">
+            <div class="form-row" style="margin-top: 5px;">
+                <label for="type">소속회사</label>
+                <select id="type">
+                    <option>선택</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <label>연락처</label>
+                <p>010-3447-0374</p> 
+            </div>
+            <div class="form-row">
+                <label >본인성명</label>
+                <p>홍길동</p> 
+            </div>
+            <div class="form-row">
+                <label >생년월일</label>
+                <p>1997.03.01</p> 
+            </div>
+            <div class="form-row">
+                <label >나이</label>
+                <p>만 47세</p> 
+            </div>
+            <div class="form-row">
+                <label for="job">직종</label>
+                <input type="text" id="job" placeholder="텍스트 입력" class="emergency-phone">
+            </div>
+            <div class="form-row">
+                <label>경력</label>
+                <div class="multi-input">
+                    <input type="text" placeholder="입력" >
+                    <span>년</span>
+                    <input type="text" placeholder="입력" >
+                    <span>월</span>
+                </div>
+            </div>
+            <div class="form-row address-row">
+                <label>주소</label>
+                <div class="address-group">
+                    <input type="text" placeholder="선택된 주소 표시" readonly class="emergency-phone">
+                    <button type="button" class="search-btn"><span>🔍</span></button>
+                </div>
+            </div>
+            <div class="form-row">
+                <label for="address-detail">상세주소</label>
+                <input type="text" id="address-detail" placeholder="상세 주소 입력" class="emergency-phone">
+            </div>
+            <div class="form-row emergency-row">
+                <label class="emergency-label">비상<br>연락처</label>
+                <div class="emergency-inputs">
+                    <div class="multi-input">
+                        <input type="text" placeholder="성명">
+                        <input type="text" placeholder="관계">
+                    </div>
+                    <input type="text" placeholder="연락처 입력" class="emergency-phone">
+                </div>
+            </div>
+            
+            <button type="button" class="next-btn">다음</button>
+        </form>
+    </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <button class="accordion-title">
+      <div class="accordion-label">교육 이수 및 보호구 수령</div>
+      <span class="accordion-arrow" aria-hidden="true"></span>
+    </button> 
+    <div class="accordion-content">
+      <div class="mobile-container">
+        <form class="info-form">
+            <div class="section">
+                <div class="section-title">◈ 교육 이수 사항</div>
+                <div class="survey-box">
+                    <div class="survey-row">
+                        <div class="survey-textarea">외부 교육 기관에서 실시하는 건설업 기초안전보건교육을 이수 하였습니다.</div>
+                        <input type="checkbox" class="survey-checkbox red-checkbox">
+                    </div>
+                    <div class="survey-row">
+                        <div type="button" class="photo-upload-btn" disabled>사진 업로드 </div>
+                        <button class="photo-icon">📷</button>
+                    </div>
+                    <div class="survey-row">
+                        <div class="survey-textarea" >당 현장에서 실시하는 신규 채용자 안전보건교육을 받았습니다.</div>
+                        <input type="checkbox" class="survey-checkbox red-checkbox">
+                    </div>
+                    <div class="survey-row">
+                        <div class="survey-textarea" >당 현장에서 준수해야 할 정보보안 사상에 대한 교육을 받았습니다.</div>
+                        <input type="checkbox" class="survey-checkbox red-checkbox">
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="section-title">◈ 개인 보호구 수령 확인</div>
+                <div class="survey-table">
+                    <div class="survey-table-row">
+                        <span class="survey-table-span">안전모</span>
+                        <input type="checkbox" class="survey-checkbox blue-checkbox">
+                        <span class="survey-table-span">보안경</span>
+                        <input type="checkbox" class="survey-checkbox blue-checkbox">
+                    </div>
+                    <div class="survey-table-row">
+                        <span class="survey-table-span">안전대</span>
+                        <input type="checkbox" class="survey-checkbox blue-checkbox">
+                        <span class="survey-table-span">각반</span>
+                        <input type="checkbox" class="survey-checkbox blue-checkbox">
+                    </div>
+                    <div class="survey-table-row">
+                        <span class="survey-table-span">안전화</span>
+                        <input type="checkbox" class="survey-checkbox blue-checkbox">
+                        <span class="survey-table-span">기타</span>
+                        <input type="checkbox" class="survey-checkbox blue-checkbox">
+                    </div>
+                    <div class="survey-table-row agree-boder">
+                        <span class="survey-table-span agree-detail-trigger" style="display:flex; align-items:center; padding:0 8px; min-height:36px; font-size:1.08rem; background:#fafafa; border-radius:6px; border:1px solid #eee; width:100%;">
+                            <span class="agree-detail-label" style="flex:1;">안전보건관리 및 정보보호서약</span>
+                            <span class="agree-detail-right" style="display:flex; align-items:center; gap:4px;">
+                                <span class="agree-confirm-text" style="display:none; color:#2989c9; font-weight:700; font-size:1.2rem;">확인</span>
+                                <span class="chevron-icon" aria-hidden="true"></span>
+                            </span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="next-btn">다음</button>
+        </form>
+    </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <button class="accordion-title">
+      <div class="accordion-label">신규 채용자 면접부</div>
+      <span class="accordion-arrow" aria-hidden="true"></span>
+    </button> 
+    <div class="accordion-content">
+      <div class="mobile-container">
+        <form class="info-form">
+            <div class="section">
+                <div class="section-title">◆ 혈압 측정 결과</div>
+                <div class="survey-box">
+                    <div class="survey-row">
+                        <div class="survey-table-header">구분</div>
+                        <div class="survey-table-header">1차</div>
+                        <div class="survey-table-header">2차</div>
+                        <div class="survey-table-header">3차</div>
+                    </div>
+                    <div class="survey-row">
+                        <div class="survey-table-header">최고</div>
+                        <input type="text" class="survey-table-input" placeholder="입력">
+                        <input type="text" class="survey-table-input" placeholder="입력">
+                        <input type="text" class="survey-table-input" placeholder="입력">
+                    </div>
+                    <div class="survey-row">
+                        <div class="survey-table-header">최저</div>
+                        <input type="text" class="survey-table-input" placeholder="입력">
+                        <input type="text" class="survey-table-input" placeholder="입력">
+                        <input type="text" class="survey-table-input" placeholder="입력">
+                    </div>
+                    <div class="survey-row">
+                        <span class="photo-upload-btn" disabled>사진 업로드 </span>
+                        <button class="photo-icon">📷</button>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="section-title">▶ 문진 결과</div>
+                <div class="survey-table">
+                    <div class="survey-table-row">
+                        <div class="survey-table-header">치료 여부</div>
+                        <div class="survey-table-cell">
+                            <label class="radio-label"><input type="radio" name="radio1" checked> 지병</label>
+                            <label class="radio-label"><input type="radio" name="radio1"> 사고</label>
+                        </div>
+                    </div>
+                    <div class="survey-table-row">
+                        <div class="survey-table-header">입원 여부</div>
+                        <div class="survey-table-cell">
+                            <label class="radio-label"><input type="radio" name="radio2">지병</label>
+                            <label class="radio-label"><input type="radio" name="radio2">사고</label>
+                        </div>
+                    </div>
+                    <div class="survey-table-row">
+                        <div class="survey-table-header">치료/입원 <br>내용 기재</div>
+                        <div class="survey-table-cell">
+                            <textarea class="survey-table-input" rows="3" placeholder="(언제,어디서,어떻게,어디를,현재 상태)"></textarea>
+                        </div>
+                    </div>
+                    <div class="survey-table-row">
+                        <div class="survey-table-header">혈액형</div>
+                        <div class="survey-table-cell">
+                            <select class="survey-table-input">
+                                <option>선택</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="survey-table-row">
+                        <div class="survey-table-header">유해 작업</div>
+                        <div class="survey-table-cell">
+                            <select class="survey-table-input">
+                                <option>선택</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="survey-table-row agree-boder">
+                        <span class="survey-table-span agree-data-trigger" style="display:flex; align-items:center; padding:0 8px; min-height:36px; font-size:1.08rem; background:#fafafa; border-radius:6px; border:1px solid #eee; width:100%;">
+                            <span class="agree-detail-label" style="flex:1;">개인정보 수집 이용 및 제공</span>
+                            <span class="agree-detail-right" style="display:flex; align-items:center; gap:4px;">
+                                <span class="agree-data-confirm-text" style="display:none; color:#2989c9; font-weight:700; font-size:1.2rem;">확인</span>
+                                <span class="chevron-icon" aria-hidden="true"></span>
+                            </span>
+                        </span>
+                    </div>
+                    <div class="survey-row">
+                        <span class="photo-upload-btn" disabled>면접자 서명</span>
+                        <button class="photo-icon">📷</button>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="next-btn">입력</button>
+        </form>
+    </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+<script>
+  //임시로 작성함
+ const titles = document.querySelectorAll('.accordion-title');
+const contents = document.querySelectorAll('.accordion-content');
+const nextBtns = document.querySelectorAll('.accordion-content .next-btn');
+
+function updateArrows() {
+  titles.forEach((btn, idx) => {
+    const arrow = btn.querySelector('.accordion-arrow');
+    if (contents[idx].classList.contains('active')) {
+      arrow.classList.add('open');
+    } else {
+      arrow.classList.remove('open');
+    }
+  });
+}
+
+titles.forEach((btn, idx) => {
+  btn.addEventListener('click', function() {
+    const isActive = contents[idx].classList.contains('active');
+    contents.forEach((c, i) => {
+      c.classList.remove('active');
+      titles[i].classList.remove('active');
+    });
+    if (!isActive) {
+      contents[idx].classList.add('active');
+      titles[idx].classList.add('active'); 
+    }
+    updateArrows();
+    if (!isActive) {
+      const offset = 12; 
+      const rect = btn.getBoundingClientRect();
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      window.scrollTo({
+        top: rect.top + scrollTop - offset,
+        behavior: 'smooth'
+      });
+    }
+  });
+});
+
+nextBtns.forEach((btn, idx) => {
+  btn.addEventListener('click', function() {
+    contents.forEach((c, i) => {
+      c.classList.remove('active');
+      titles[i].classList.remove('active');
+    });
+    if (idx + 1 < contents.length) {
+      contents[idx + 1].classList.add('active');
+      titles[idx + 1].classList.add('active');
+       }
+    updateArrows();
+    if (idx + 1 < contents.length) {
+      const offset = 12; 
+      const rect = titles[idx + 1].getBoundingClientRect();
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      window.scrollTo({
+        top: rect.top + scrollTop - offset,
+        behavior: 'smooth'
+      });
+    }
+  });
+});
+
+updateArrows();
+
+const agreeTrigger = document.querySelector('.agree-detail-trigger');
+const agreeConfirmText = document.querySelector('.agree-confirm-text');
+agreeTrigger.addEventListener('click', function() {
+  window.open('proposal_detail_2.html', 'proposal_detail');
+});
+
+window.addEventListener('message', function(e) {
+  if (e.data === 'agreeConfirmed') {
+    agreeConfirmText.style.display = 'inline';
+  }
+});
+
+const agreeDataTrigger = document.querySelector('.agree-data-trigger');
+const agreeDataConfirmText = document.querySelector('.agree-data-confirm-text');
+agreeDataTrigger.addEventListener('click', function() {
+  window.open('proposal_data_2.html', 'agreeData');
+});
+window.addEventListener('message', function(e) {
+  if (e.data === 'agreeConfirmed2') {
+    if (agreeDataConfirmText) agreeDataConfirmText.style.display = 'inline';
+  }
+});
+    </script>
