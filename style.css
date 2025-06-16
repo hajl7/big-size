@@ -103,7 +103,7 @@ footer {
   font-size: 2.1rem;
   font-weight: 900;
   margin-bottom: 26px;
-  margin-top: 18px;
+  margin-top: 4px;
 }
 
 .form-row {
@@ -484,6 +484,7 @@ footer {
   display: block;
   animation: fadeIn 0.2s;
 }
+
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -733,12 +734,21 @@ footer {
     }
     .agree-detail-header {
       align-items: center;
-      padding: 18px 18px 8px 18px;
+      padding: 0px 18px 8px 18px;
       border-bottom: 1px solid #222;
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
-  
+      justify-content:space-between;  
+    }
+      .agree-detail-close {
+      font-size: 2rem;
+      color: #222;
+      background: none;
+      border: none;
+      cursor: pointer;
+      line-height: 1;
+      float: right;
+      margin: 14px 14px 0px 0px;
     }
     .agree-detail-title {
       color: #111;
