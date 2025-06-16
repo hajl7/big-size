@@ -119,6 +119,13 @@ footer {
   margin-bottom: 26px;
   margin-top: 18px;
 }
+.form-title2 {
+  text-align: center;
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin-bottom: 26px;
+  margin-top: 0px;
+}
 
 .form-row {
   display: flex;
@@ -745,23 +752,23 @@ footer {
       margin: 0 auto;
        box-sizing: border-box;  
     }
-  .agree-detail-header {
+       .agree-detail-header {
       align-items: center;
-      padding-bottom: 8px;
+      padding: 0px 18px 8px 18px;
       border-bottom: 1px solid #222;
       display: flex;
       flex-direction: column;
        justify-content: flex-start;    
     }
       .agree-detail-close {
-      font-size: 2.3rem;
+      font-size: 2.5rem;
       color: #222;
       background: none;
       border: none;
       cursor: pointer;
       line-height: 1;
       float: right;
-      margin: 6px 14px 0px 0px;
+      margin: 14px 14px 0px 0px;
     }
 
     .agree-detail-title {
@@ -771,22 +778,16 @@ footer {
       text-align: center;
       word-break: keep-all;
     }
-  .agree-detail-content {
-      /* flex: 1 1 auto; */
-      flex: 1;
+    .agree-detail-content {
+      flex: 1 1 auto;
       overflow-y: auto;
       padding: 10px 10px 0 10px;
       color: #111;
       font-size: 1.2rem;
       line-height: 1.7;
       background: #fff;
-      margin-bottom: 80px;
     }
-     .agree-detail-footer {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
+    .agree-detail-footer {
       padding: 18px;
       background: #fff;
       border-top: 1px solid #eee;
