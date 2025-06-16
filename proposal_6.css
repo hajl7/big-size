@@ -1,13 +1,13 @@
 @font-face {
-	src: url(./css/fonts/LGSmHaotfTR.otf);
-	font-family: "LG스마트체2.0 Regular";
+	src: url(./css/fonts/LGEITextTTF-Regular.ttf);
+	font-family: "LGEITextTTF";
 }
 
 html, body {
   margin: 0;
   padding: 0;
   overflow-y: auto;
-  font-family: 'LG스마트체2.0 Regular', sans-serif;
+  font-family: 'LGEITextTTF', sans-serif;
     /* -webkit-text-fill-color: #333; */
   /* color: #333; */
 }
@@ -16,13 +16,13 @@ html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family:'LG스마트체2.0 Regular', sans-serif;
+  font-family:'LGEITextTTF', sans-serif;
     /* -webkit-text-fill-color: #333; */
   /* color: #333; */
 }
 body {
   /* font-family: 'Arial', sans-serif; */
-  font-family: 'LG스마트체2.0 Regular', sans-serif;
+  font-family: 'LGEITextTTF', sans-serif;
   line-height: 1.4;
   color: #333;
   background: #f7f7f7;
