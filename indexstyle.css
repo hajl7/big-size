@@ -373,16 +373,16 @@ footer {
       border: 2px solid #bbb;
       border-radius: 6px;
       background: #fff;
-      padding: 4px 6px 4px 6px;
-      margin: 0 auto 18px auto;
-      max-width: 540px;
+      padding: 6px;
+      margin: 0 auto 0px auto;
+      /* max-width: 540px; */
       box-shadow: 0 2px 8px rgba(0,0,0,0.04);
     }
     .agree-box2-title {
       text-align: center;
-      font-size: 1.25em;
+      font-size: 1.5em;
       font-weight: bold;
-      margin-bottom: 18px;
+      margin: 12px 0PX;
     }
     .agree-box2-table {
       width: 100%;
@@ -392,14 +392,14 @@ footer {
       border-collapse: separate;
       border-spacing: 0 6px;
     }
-     .agree-box3-table {
+     /* .agree-box3-table {
       width: 100%;
       margin-bottom: 12px;
       font-size: 0.95em;
       font-weight: 500;
       border-collapse: separate;
       border-spacing: 0 6px;
-    }
+    } */
     .agree-box2-table td {
       /* padding: 2px 4px; */
       border: none;
@@ -437,7 +437,7 @@ footer {
       min-width: 80px ;
       height: 22px;
       display: inline-block;
-      /* width: 120px; */
+      text-align: center;
     }
      .agree-box3-table .input-line {
       border-bottom: 1.5px solid #222;
@@ -448,8 +448,8 @@ footer {
     }
     .agree-content2 {
       font-size: 0.9em;
-      line-height: 1.6;
-      margin: 10px 0 0 0;
+      line-height: 1.55;
+      margin: 0px 0 0 0;
       word-break: keep-all;
     }
     .agree-content2 strong {
@@ -478,7 +478,7 @@ footer {
       justify-content: space-between;
       align-items: center;
       margin-top: 16px;
-      font-size: 1em;
+      font-size: 1.4em;
       font-weight: 500;
       padding-left: 10PX;
     }
@@ -494,9 +494,9 @@ footer {
       margin: 0 8px;
     }
     .agree-sign-row2 .date {
-      letter-spacing: 0.3em;
+      /* letter-spacing: 0.3em; */
       font-weight: 400;
-      min-width: 120px;
+      min-width: 100px;
     }
     .agree-footer2 {
       font-size: 1.1em;
@@ -506,8 +506,8 @@ footer {
       text-align: left;
     }
      .agree-footer5 {
-      font-size: 1.1em;
-      font-weight: bold;
+      font-size: 1.4em;
+      font-weight: 700;
       margin-top: 18px;
       margin-bottom: 0;
       text-align: left;
@@ -523,13 +523,15 @@ footer {
     }
     .sign-footer5{
       display:inline-block;
-      min-width:80px;
+      /* min-width:80px; */
+      font-size: 1.2rem;
     }
     .signinput-footer5{
       display:inline-block;
       min-width:60px;
       border-bottom:1.5px solid #fff;
-      margin:0 8px 0 8px;
+      margin:0 18px 0 18px;
+      font-size: 1.2rem;
     }
     .red-checkbox {
     accent-color:#d8d4cd;
@@ -537,102 +539,4 @@ footer {
     .blue-checkbox {
     accent-color: #d8d4cd;
     }
-      /* .agree-box5 {
-      border: 2px solid #bbb;
-      border-radius: 6px;
-      background: #fff;
-      padding: 24px 18px 18px 18px;
-      margin: 0 auto 18px auto;
-      max-width: 540px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-    }
-    .agree-box5-title {
-      text-align: center;
-      font-size: 1.25em;
-      font-weight: bold;
-      margin-bottom: 18px;
-    }
-    .agree-box5-table {
-      width: 100%;
-      margin-bottom: 12px;
-      font-size: 0.95em;
-      font-weight: 500;
-      border-collapse: separate;
-      border-spacing: 0 6px;
-    }
-    .agree-box5-table td {
-      border: none;
-      font-size: 1em;
-      vertical-align: bottom;
-      padding: 2px 4px;
-    }
-    .agree-box5-table tr td:first-child {
-      text-align: right;
-      min-width: 110px;
-    }
-    .agree-box5-table tr td:last-child {
-      border-bottom: 1.5px solid #222;
-      min-width: 120px ;
-      height: 22px;
-    }
-    .agree-box5-table .input-line {
-      border-bottom: 1.5px solid #222;
-      min-width: 120px;
-      height: 22px;
-      display: inline-block;
-      width: 120px;
-    }
-    .agree-content5 {
-      font-size: 0.98em;
-      line-height: 1.6;
-      margin: 10px 0 0 0;
-      word-break: keep-all;
-    }
-    .agree-content5 strong {
-      font-weight: bold;
-    }
-    .agree-content5 .center {
-      display: block;
-      text-align: center;
-      margin: 8px 0 8px 0;
-      font-weight: 600;
-    }
-    .agree-sign-row5 {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 18px;
-      font-size: 1em;
-      font-weight: 500;
-    }
-    .agree-sign-row5 span {
-      min-width: 100px;
-      text-align: start;
-    }
-    .agree-sign-row5 .sign-blank {
-      border-bottom: 1.5px solid #222;
-      min-width: 60px;
-      display: inline-block;
-      height:right-logo 18px;
-      margin: 0 8px;
-    }
-    .agree-sign-row5 .date {
-      letter-spacing: 0.3em;
-      font-weight: 400;
-      min-width: 120px;
-    }
-    .agree-footer5 {
-      font-size: 1.1em;
-      font-weight: bold;
-      margin-top: 18px;
-      margin-bottom: 0;
-      text-align: left;
-    } */
-          /* @media (max-width: 600px) {
-      .agree-box2 { padding: 5px 1vw; }
-      .agree-box2-table td { font-size: 0.9em; }
-      .agree-sign-row2 span { min-width: 60px; } */
-       /* .agree-box5 { padding: 10px 2vw; }
-      .agree-box5-table td { font-size: 0.95em; }
-      .agree-sign-row5 span { min-width: 60px; } */
-    /* } */
+    
