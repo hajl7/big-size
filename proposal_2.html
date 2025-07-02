@@ -204,21 +204,50 @@
                         </div>
                     </div>
                     <div class="survey-table-row">
-                        <div class="survey-table-header">혈액형</div>
+                      <div class="survey-table-header">혈액형</div>
                         <div class="survey-table-cell">
-                            <select class="survey-table-input">
+                            <select class="survey-table-input" id="blood-select">
                                 <option>선택</option>
+                                <option>A</option>
+                                <option>B</option>
+                                <option>AB</option>
+                                <option>O</option>
+                                <option>기타</option>
                             </select>
                         </div>
                     </div>
-                    <div class="survey-table-row">
+                      <div class="survey-table-row" id="blood-type-row" style="display:none;">
+                        <div class="survey-table-header-hide "></div>
+                        <div class="survey-table-cell">
+                           <input type="text" id="blood-type" class="survey-table-input" placeholder="기타 내용을 입력하세요">
+                        </div>
+                      </div>
+                      <div class="survey-table-row">
                         <div class="survey-table-header">유해 작업</div>
                         <div class="survey-table-cell">
-                            <select class="survey-table-input">
+                            <select class="survey-table-input" id="harmful-select">
                                 <option>선택</option>
+                                <option>위험물</option>
+                                <option>용접작업</option>
+                                <option>기타 유해작업</option>
                             </select>
                         </div>
-                    </div>
+                      </div>
+                      <div class="survey-table-row" id="harmful-etc-row" style="display:none;">
+                          <!-- <div class="survey-table-header"></div> -->
+                          <div class="survey-table-cell">
+                              <textarea
+                                  id="harmful-etc"
+                                  class="survey-table-input"
+                                  placeholder="기타 내용을 입력하세요"
+                                  maxlength="100"
+                                  rows="3"
+                                  style="resize:vertical; min-height:60px; font-size:1.2rem; padding:12px;"
+                              ></textarea>
+                              <!-- <div id="harmful-etc-count" style="text-align:right; font-size:0.95em; color:#888; margin-top:2px;">0 / 100</div> -->
+                          </div>
+                      </div>
+                      
                     <div class="survey-table-row agree-boder">
                         <span class="survey-table-span agree-data-trigger" style="display:flex; align-items:center; padding:0 8px; min-height:36px; font-size:1.08rem; background:#fafafa; border-radius:6px; border:1px solid #eee; width:100%;">
                             <span class="agree-detail-label" style="flex:1;">개인정보 수집 이용 및 제공</span>
@@ -329,5 +358,31 @@ window.addEventListener('message', function(e) {
   if (e.data === 'agreeConfirmed2') {
     if (agreeDataConfirmText) agreeDataConfirmText.style.display = 'inline';
   }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  // 혈액형 기타
+  const bloodSelect = document.getElementById('blood-select');
+  const bloodEtcRow = document.getElementById('blood-type-row');
+  bloodSelect.addEventListener('change', function() {
+    if (bloodSelect.value === '기타') {
+      bloodEtcRow.style.display = '';
+    } else {
+      bloodEtcRow.style.display = 'none';
+      document.getElementById('blood-etc').value = '';
+    }
+  });
+
+  // 유해작업 기타
+  const harmfulSelect = document.getElementById('harmful-select');
+  const harmfulEtcRow = document.getElementById('harmful-etc-row');
+  harmfulSelect.addEventListener('change', function() {
+    if (harmfulSelect.value === '기타 유해작업') {
+      harmfulEtcRow.style.display = '';
+    } else {
+      harmfulEtcRow.style.display = 'none';
+      document.getElementById('harmful-etc').value = '';
+    }
+  });
 });
     </script>

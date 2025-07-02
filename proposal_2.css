@@ -426,6 +426,12 @@ footer {
   align-items: center;
   justify-content: center;
 }
+.survey-table-header-hide{
+    flex: 1 1 0;
+  min-width: 0;
+  background: #fff;
+  padding-right: 5px;
+}
 .survey-table-double {
   flex: 1 1 0;
   min-width: 0;
