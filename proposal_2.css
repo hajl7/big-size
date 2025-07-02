@@ -247,7 +247,7 @@ footer {
   right: 12px;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 1.0em;
+  font-size: 0.8em;
   pointer-events: none;
   transition: transform 0.2s;
 }
