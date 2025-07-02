@@ -17,25 +17,25 @@
                         <div class="survey-table-double ">LGE 창원 Smart</div>
                     </div>
                 </div>
-                <div class="survey-table-row">
+                <!-- <div class="survey-table-row">
                     <div class="survey-table-header">내외국인</div>
                     <div class="survey-table-cell">
                         <label class="radio-label"><input type="radio" name="radio1" checked> 내국인</label>
                         <label class="radio-label"><input type="radio" name="radio1"> 외국인</label>
                     </div>
-                </div>
+                </div> -->
                 <div class="survey-table-row">
                     <div class="survey-table-header">근무형태</div>
                     <div class="survey-table-cell">
-                        <label class="radio-label"><input type="radio" name="radio2" checked> 현장직</label>
-                        <label class="radio-label"><input type="radio" name="radio2"> 내근직</label>
+                        <label class="radio-label"><input type="radio" name="radio2"  id="radio2-site"> 현장직</label>
+                        <label class="radio-label"><input type="radio" name="radio2" id="radio2-desk"> 내근직</label>
                     </div>
                 </div>
-                <div class="survey-table-row">
+                <div class="survey-table-row" id="task-row">
                     <div class="survey-table-header">작업유형</div>
-                    <div class="survey-table-cell">
-                        <label class="radio-label"><input type="radio" name="radio3" checked> 투입</label>
-                        <label class="radio-label"><input type="radio" name="radio3"> 철수</label>
+                    <div class="survey-table-cell" id="task-cell">
+                        <label class="radio-label" id="task-in"><input type="radio" name="radio3" > 투입</label>
+                        <label class="radio-label" id="task-out"><input type="radio" name="radio3"> 철수</label>
                     </div>
                 </div>
             </div>
@@ -52,4 +52,34 @@
         </form>
     </div>
 </body>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+  const radioSite = document.getElementById('radio2-site');
+  const radioDesk = document.getElementById('radio2-desk');
+  const taskOut = document.getElementById('task-out');
+  const taskOutInput = taskOut.querySelector('input[type="radio"]');
+  const taskIn = document.getElementById('task-in');
+  const taskInInput = taskIn.querySelector('input[type="radio"]');
+
+  function updateTask() {
+    if (radioSite.checked) {
+      taskOutInput.disabled = true;
+      taskOut.style.color = '#aaa'; 
+      taskInInput.disabled = false;
+      taskIn.style.color = '';
+    } else if (radioDesk.checked) {     
+      taskOutInput.disabled = false;
+      taskOut.style.color = '';
+      taskInInput.disabled = false;
+      taskIn.style.color = '';
+    }
+  }
+
+  radioSite.addEventListener('change', updateTask);
+  radioDesk.addEventListener('change', updateTask);
+
+  // 페이지 로드시 초기화
+  updateTask();
+});
+</script>
 </html>
